@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d46f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101422",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>Contacto | Sublimation Pro</title>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Navigation -->
+        <header
+            class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-40 py-4">
+            <div class="max-w-[1200px] mx-auto flex items-center justify-center">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-3 text-primary">
+                        <img src="assets/Logo/logo largo.png" alt="Logo SubliArt" class="h-11">
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold"
+                            href="index.html">Inicio</a>
+                        <a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold"
+                            href="productos.html">Catálogo</a>
+                        <a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold"
+                            href="historial.html">Historial</a>
+                        <a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold"
+                            href="contacto.html">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow">
+            <!-- Hero Section -->
+            <section class="py-16 px-6">
+                <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-primary font-bold tracking-widest uppercase text-xs">Atención al
+                            cliente</span>
+                        <h1 class="text-5xl lg:text-6xl font-black mt-4 leading-tight">¿Tienes dudas o buscas un <span
+                                class="text-primary">presupuesto?</span></h1>
+                        <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
+                            Estamos listos para plasmar tus ideas en tazas, camisetas, gorras y más. Contáctanos por
+                            cualquiera de nuestros canales oficiales.
+                        </p>
+                        <div class="mt-10">
+                            <a class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-5 rounded-xl font-bold text-lg shadow-xl shadow-green-500/20 transition-all transform hover:-translate-y-1"
+                                href="https://wa.me/524776092885" target="_blank" rel="noopener noreferrer">
+                                <span class="material-symbols-outlined">chat</span>
+                                Escríbenos por WhatsApp para una cotización rápida
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-primary/10 rounded-3xl blur-3xl group-hover:bg-primary/20 transition-all">
+                        </div>
+                        <img alt="Customer support team"
+                            class="relative rounded-3xl object-cover aspect-video lg:aspect-square w-full shadow-2xl"
+                            data-alt="Modern workspace with colorful sublimation samples"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5ofeguIU_7BaaejeXDsrsKhaXSYxrlNRslvRjZ1gAZNIP9M7Bn4-DSN7CyfkIwJY5yzPN_FqsY77c6680zS8V_dTawGLxanPWJQwbKminF4w-ZYcZr1Gvm-A3q0jTe3X-viRrChEA1Haq6FJzlf99m2_hJ28DnvJaJHz1x9VVENq4mGEE_kOkecMlT71LpqMKy-acFycbay9NbnBOQG_vWdaJTvL3DBxeOI3VViqUSVBnhIJfIZxCp_CnehaqFa80S50SBrOod2w" />
+                    </div>
+                </div>
+            </section>
+            <!-- FAQ Section & Hours Section -->
+            <section class="py-20 bg-slate-100 dark:bg-slate-900/50">
+                <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-12">
+                    <!-- FAQ Section -->
+                    <div class="lg:col-span-2 w-full">
+                        <div class="text-center lg:text-left mb-10">
+                            <h2 class="text-4xl font-black mb-4">Preguntas Frecuentes</h2>
+                            <p class="text-slate-600 dark:text-slate-400 text-lg">Resolvemos tus dudas sobre el proceso de
+                                sublimación
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <!-- FAQ Item 1 -->
+                            <details class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm overflow-hidden"
+                                open="">
+                                <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                                    <span class="font-bold text-lg">¿Qué materiales se pueden sublimar?</span>
+                                    <span
+                                        class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div
+                                    class="px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-50 dark:border-slate-700 pt-4">
+                                    La sublimación funciona mejor en tejidos con al menos un 65% de poliéster y en
+                                    superficies
+                                    rígidas tratadas con polímero (como cerámica, metal o madera tratada). El color de
+                                    base
+                                    ideal es siempre el blanco.
+                                </div>
+                            </details>
+                            <!-- FAQ Item 2 -->
+                            <details class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm overflow-hidden">
+                                <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                                    <span class="font-bold text-lg">¿Tienen un pedido mínimo?</span>
+                                    <span
+                                        class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div
+                                    class="px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-50 dark:border-slate-700 pt-4">
+                                    ¡No! Podemos realizar desde una sola pieza para regalos personales hasta
+                                    producciones de
+                                    miles de unidades para eventos corporativos. Ofrecemos precios especiales por
+                                    volumen.
+                                </div>
+                            </details>
+                            <!-- FAQ Item 3 -->
+                            <details class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm overflow-hidden">
+                                <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                                    <span class="font-bold text-lg">¿Cuánto tiempo tarda mi pedido?</span>
+                                    <span
+                                        class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div
+                                    class="px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-50 dark:border-slate-700 pt-4">
+                                    Para pedidos individuales o pequeños, solemos entregar en 24-48 horas hábiles. Para
+                                    pedidos
+                                    por volumen, el tiempo estimado es de 3 a 7 días hábiles dependiendo de la cantidad.
+                                </div>
+                            </details>
+                            <!-- FAQ Item 4 -->
+                            <details class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm overflow-hidden">
+                                <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                                    <span class="font-bold text-lg">¿Cómo envío mis diseños?</span>
+                                    <span
+                                        class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div
+                                    class="px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-50 dark:border-slate-700 pt-4">
+                                    Puedes enviarlos directamente por WhatsApp o correo electrónico. Recomendamos
+                                    formatos como
+                                    PNG con fondo transparente, PDF, AI o PSD con una resolución mínima de 300 DPI para
+                                    asegurar
+                                    la mejor calidad.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- Side Info -->
+                    <div class="space-y-8">
+                        <div class="bg-primary/5 dark:bg-primary/10 p-8 rounded-3xl">
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">schedule</span>
+                                Horario de Atención
+                            </h3>
+                            <ul class="space-y-4">
+                                <li class="flex justify-between text-sm">
+                                    <span class="font-medium">Lunes - Viernes</span>
+                                    <span class="text-slate-600 dark:text-slate-400">9:00 AM - 6:00 PM</span>
+                                </li>
+                                <li class="flex justify-between text-sm">
+                                    <span class="font-medium">Sábados</span>
+                                    <span class="text-slate-600 dark:text-slate-400">10:00 AM - 2:00 PM</span>
+                                </li>
+                                <li class="flex justify-between text-sm text-red-500 font-bold">
+                                    <span>Domingos</span>
+                                    <span>Cerrado</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm overflow-hidden relative min-h-[300px] flex flex-col">
+                            <h3 class="text-xl font-bold mb-4">Ubicación</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 italic">Madre Patria 412, Diez de
+                                Mayo, León, Gto.</p>
+                            <div
+                                class="flex-grow rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1972.2606170755296!2d-101.62759118585818!3d21.06738286561684!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b95f75c1f45f1%3A0x17a84427450dcfa!2sMadre%20Patria%20412%2C%20Diez%20de%20Mayo%2C%2037549%20Le%C3%B3n%20de%20los%20Aldama%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1773950407354!5m2!1ses-419!2smx"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <!-- Footer -->
+        <footer
+            class="px-6 lg:px-40 py-12 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800/50 transition-colors duration-300">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 text-primary mb-6">
+                        <img src="assets/Logo/logo largo.png" alt="Logo SubliArt" class="h-11">
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 mb-6">Expertos en sublimación y personalización de
+                        artículos promocionales y regalos únicos.</p>
+
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6">Enlaces Rápidos</h5>
+                    <ul class="space-y-4 text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Inicio</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="productos.html">Catálogo</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="historial.html">Historial</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6">Categorías</h5>
+                    <ul class="space-y-4 text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="#">Textiles</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Cerámica</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Accesorios</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Corporativo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6">Contacto</h5>
+                    <ul class="space-y-4 text-slate-500 dark:text-slate-400">
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-primary text-sm">mail</span> [EMAIL_ADDRESS]
+                        </li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-primary text-sm"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                </svg></span> SubliArt
+                        </li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-primary text-sm"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                                </svg></span> +52 477 609 2885
+                        </li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-primary text-sm">location_on</span> León,
+                            Guanajuato,
+                            México</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 text-center text-slate-500 dark:text-slate-400 text-sm">
+                <p>© 2026 Dunny Personalizados. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

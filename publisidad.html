@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Lona - SubliArt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background: radial-gradient(circle at top right, rgba(236, 72, 153, 0.1), transparent),
+                radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.1), transparent);
+        }
+
+        .qr-frame {
+            border: 2px solid #f3f4f6;
+            padding: 10px;
+            border-radius: 15px;
+            background: white;
+        }
+
+        /* Estilos optimizados para legibilidad en impresión */
+        .print-shadow {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="hero-bg min-h-screen p-8">
+
+    <!-- Encabezado Principal -->
+    <header class="text-center mb-12">
+        <img src="assets/Logo/Logo General.png" alt="Logo" class="h-64 mx-auto mb-4">
+        <div class="w-32 h-2 bg-pink-500 mx-auto mt-4 rounded-full"></div>
+    </header>
+
+    <!-- Frase Gancho -->
+    <div class="text-center mb-16">
+        <h2 class="text-4xl font-semibold text-gray-800 italic">"Damos vida a tus ideas en cualquier superficie"</h2>
+    </div>
+
+    <!-- Sección de Productos (Galería Visual) -->
+    <section class="container mx-auto mb-20">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Producto 1 -->
+            <div class="bg-white rounded-3xl overflow-hidden print-shadow border border-gray-100">
+                <img src="assets/index/cojin.png" alt="Tazas" class="w-full h-64 object-cover">
+                <div class="p-6 text-center">
+                    <p class="text-2xl font-bold text-gray-800">Cojines</p>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="bg-white rounded-3xl overflow-hidden print-shadow border border-gray-100">
+                <img src="assets/index/taza.png" alt="Playeras" class="w-full h-64 object-cover">
+                <div class="p-6 text-center">
+                    <p class="text-2xl font-bold text-gray-800">Tazas</p>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="bg-white rounded-3xl overflow-hidden print-shadow border border-gray-100">
+                <img src="assets/index/llavero.jpg" alt="Gorras" class="w-full h-64 object-cover">
+                <div class="p-6 text-center">
+                    <p class="text-2xl font-bold text-gray-800">Llaveros</p>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="bg-white rounded-3xl overflow-hidden print-shadow border border-gray-100">
+                <img src="assets/productos/lamina.png" alt="Termos" class="w-full h-64 object-cover">
+                <div class="p-6 text-center">
+                    <p class="text-2xl font-bold text-gray-800">Laminas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Informativa: Redes y QR (Diseñado para lectura rápida) -->
+    <section
+        class="container mx-auto bg-white rounded-3xl sm:rounded-[3rem] p-6 sm:p-12 border-2 border-pink-100 shadow-2xl">
+        <div class="text-center mb-8 sm:mb-12">
+            <h3
+                class="text-2xl sm:text-4xl font-bold text-gray-800 underline decoration-pink-500 decoration-4 underline-offset-4 sm:underline-offset-8">
+                ¡CONTÁCTANOS Y PIDE EL TUYO!</h3>
+        </div>
+
+        <div class="flex flex-col gap-4 sm:gap-6 max-w-4xl mx-auto">
+            <!-- Web -->
+            <div
+                class="flex items-center justify-between bg-gray-50 p-4 sm:p-6 rounded-2xl border border-gray-100 gap-2 sm:gap-4 w-full">
+                <div class="flex items-center gap-3 sm:gap-6 min-w-0">
+                    <img src="assets/index/webicon.png" alt="" class="w-12 h-12 sm:w-16 sm:h-16">
+                    <div class="min-w-0">
+                        <p class="text-xs sm:t`ext-sm font-bold text-gray-400 uppercase">Web</p>
+                        <p class="text-sm sm:text-2xl font-extrabold text-gray-800 truncate">www.subliart.com</p>
+                    </div>
+                </div>
+                <div class="qr-frame p-1 sm:p-2 shrink-0">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://subliart.com"
+                        alt="QR Web" class="w-12 h-12 sm:w-16 sm:h-16">
+                </div>
+            </div>
+            <!-- WhatsApp -->
+            <div
+                class="flex items-center justify-between bg-gray-50 p-4 sm:p-6 rounded-2xl border border-gray-100 gap-2 sm:gap-4 w-full">
+                <div class="flex items-center gap-3 sm:gap-6 min-w-0">
+                    <i class="fab fa-whatsapp text-3xl sm:text-5xl text-green-500 shrink-0"></i>
+                    <div class="min-w-0">
+                        <p class="text-xs sm:text-sm font-bold text-gray-400 uppercase">WhatsApp</p>
+                        <p class="text-sm sm:text-2xl font-extrabold text-gray-800 truncate">+52 4776092885</p>
+                    </div>
+                </div>
+                <div class="qr-frame p-1 sm:p-2 shrink-0">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/5214776092885"
+                        alt="QR WhatsApp" class="w-12 h-12 sm:w-16 sm:h-16">
+                </div>
+            </div>
+
+
+            <!-- Facebook -->
+            <div
+                class="flex items-center justify-between bg-gray-50 p-4 sm:p-6 rounded-2xl border border-gray-100 gap-2 sm:gap-4 w-full">
+                <div class="flex items-center gap-3 sm:gap-6 min-w-0">
+                    <i class="fab fa-facebook text-3xl sm:text-5xl text-blue-600 shrink-0"></i>
+                    <div class="min-w-0">
+                        <p class="text-xs sm:text-sm font-bold text-gray-400 uppercase">Facebook</p>
+                        <p class="text-sm sm:text-2xl font-extrabold text-gray-800 truncate">SubliArt Oficial</p>
+                    </div>
+                </div>
+                <div class="qr-frame p-1 sm:p-2 shrink-0">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://facebook.com/subliart.personalizados"
+                        alt="QR Facebook" class="w-12 h-12 sm:w-16 sm:h-16">
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Pie de Lona / Ubicación -->
+    <footer class="mt-16 text-center">
+        <p class="text-2xl font-bold text-gray-600">
+            <i class="fas fa-map-marker-alt text-pink-500 mr-2"></i>
+            Visitamos en: Calle Madre Patria #412, Colonia 10 de Mayo, León, Gto.
+        </p>
+    </footer>
+
+</body>
+
+</html>
