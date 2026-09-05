@@ -1,0 +1,16 @@
+# Carpeta de Notas
+Notas/
+notas/
+
+# Dependencias de Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos del sistema y del editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

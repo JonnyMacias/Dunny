@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota de Remisión - Dunny</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- html2pdf for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- html2canvas for Image generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        :root {
+            --primary-bg: #121212;
+            --surface: #1e1e24;
+            --primary-color: #bb86fc;
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+            --glass-bg: rgba(30, 30, 36, 0.7);
+            --paper-bg: #ffffff;
+            --text-dark: #222222;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #121212 0%, #1e1e24 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-controls {
+            width: 100%;
+            max-width: 850px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0;
+            text-shadow: 0 0 20px rgba(187, 134, 252, 0.3);
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            background: var(--glass-bg);
+            border: 1px solid rgba(187, 134, 252, 0.5);
+            color: var(--text-main);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background: var(--primary-color);
+            color: #121212;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(187, 134, 252, 0.4);
+            border-color: var(--primary-color);
+        }
+
+        /* Paper Document */
+        .document-container {
+            width: 100%;
+            max-width: 850px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .document-paper {
+            background: var(--paper-bg);
+            color: var(--text-dark);
+            border-radius: 12px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            min-height: 900px;
+            box-sizing: border-box;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        /* Header */
+        .doc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid #f0f0f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .company-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .company-logo {
+            max-width: 150px;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        .company-name {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+            color: #111;
+        }
+
+        .doc-meta {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .doc-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #444;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .meta-row {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        /* Inputs */
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            color: var(--text-dark);
+            border: 1px solid transparent;
+            background: transparent;
+            padding: 4px 8px;
+            border-radius: 4px;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        input[type="text"]:hover,
+        input[type="number"]:hover,
+        input[type="date"]:hover,
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus {
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid #ddd;
+        }
+
+        .no-border {
+            border: none !important;
+            background: transparent !important;
+        }
+
+        /* Client Details */
+        .client-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .input-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #777;
+            text-transform: uppercase;
+        }
+
+        .input-group input {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Items Table */
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .items-table th {
+            background: #f8f8f8;
+            color: #555;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 13px;
+            padding: 12px 10px;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .items-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .col-qty {
+            width: 10%;
+        }
+
+        .col-desc {
+            width: 50%;
+        }
+
+        .col-price {
+            width: 20%;
+        }
+
+        .col-total {
+            width: 20%;
+            text-align: right;
+        }
+
+        .items-table input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .item-total {
+            font-weight: 600;
+        }
+
+        .btn-add-row {
+            background: #f0f0f0;
+            border: 1px dashed #ccc;
+            color: #555;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            transition: all 0.2s;
+        }
+
+        .btn-add-row:hover {
+            background: #e4e4e4;
+            border-color: #999;
+        }
+
+        /* Totals */
+        .totals-section {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 40px;
+        }
+
+        .totals-box {
+            width: 300px;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+        }
+
+        .total-row.grand-total {
+            border-bottom: none;
+            font-size: 20px;
+            font-weight: 700;
+            color: #111;
+            border-top: 2px solid #ddd;
+            margin-top: 5px;
+            padding-top: 15px;
+        }
+
+        .total-row input {
+            text-align: right;
+            width: 120px;
+        }
+
+        .total-value {
+            text-align: right;
+            min-width: 120px;
+            padding: 4px 8px;
+        }
+
+        /* Footer */
+        .doc-footer {
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .doc-header {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .doc-meta {
+                text-align: center;
+                align-items: center;
+            }
+
+            .client-section {
+                grid-template-columns: 1fr;
+            }
+
+            .items-table {
+                font-size: 14px;
+            }
+
+            .items-table th,
+            .items-table td {
+                padding: 8px 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-controls">
+        <h1 class="title">Generador de Remisiones</h1>
+        <div class="actions" style="flex-wrap: wrap; justify-content: flex-end;">
+            <button class="btn" onclick="startNewNote()" title="Crear una nueva nota e incrementar el folio">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Nueva Nota
+            </button>
+            <button class="btn" onclick="downloadImage()">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                Como Imagen
+            </button>
+            <button class="btn" onclick="downloadPDF()">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z">
+                    </path>
+                </svg>
+                Como PDF
+            </button>
+            <button class="btn" onclick="generateAllImagesBatch()" title="Generar imagen PNG para todas las notas registradas en la BD">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                Generar Todas las Imágenes
+            </button>
+            <button class="btn" onclick="exportDatabaseJSON()" title="Descargar base de datos de notas en JSON">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21 3.582 4 8 4s8-1.79 8-4">
+                    </path>
+                </svg>
+                Exportar BD (JSON)
+            </button>
+            <button class="btn" onclick="document.getElementById('importJsonInput').click()" title="Cargar archivo notas_bd.json">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                </svg>
+                Importar BD
+            </button>
+            <input type="file" id="importJsonInput" accept=".json" style="display:none" onchange="importDatabaseJSON(event)">
+        </div>
+    </div>
+
+    <div class="document-container">
+        <!-- Contenedor que se exportará -->
+        <div class="document-paper" id="note-document">
+
+            <div class="doc-header">
+                <div class="company-info">
+                    <div class="company-logo-container">
+                        <img src="assets/Logo/logo largo.png" alt="Dunny Logo" class="company-logo">
+                    </div>
+                    <div style="font-size: 14px; color:#666; margin-top: 5px;">Transformamos tus ideas en productos únicos</div>
+                    <div style="font-size: 13px; color:#777; margin-top: 8px; line-height: 1.4;">
+                        <strong>Tel:</strong> 477 609 2885<br>
+                        <strong>Dir:</strong> Col 10 de Mayo, Madre Patria #412<br>
+                        <strong>Web:</strong> https://personalizados.dunny.cat/
+                    </div>
+                </div>
+                <div class="doc-meta">
+                    <h1 class="doc-title">Nota de Remisión</h1>
+                    <div class="meta-row">
+                        <span class="meta-label">Fecha:</span>
+                        <input type="date" id="doc-date" style="width: 130px;">
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">No. Nota:</span>
+                        <input type="text" id="note-number" value="REM-123" style="width: 130px; font-weight: 600;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="client-section">
+                <div class="input-group">
+                    <label>Cliente / Empresa</label>
+                    <input type="text" placeholder="Nombre del cliente">
+                </div>
+                <div class="input-group">
+                    <label>Teléfono</label>
+                    <input type="text" placeholder="Número de contacto">
+                </div>
+                <div class="input-group">
+                    <label>Dirección / Envío</label>
+                    <input type="text" placeholder="Dirección de entrega">
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="text" placeholder="Correo electrónico">
+                </div>
+            </div>
+
+            <table class="items-table" id="itemsTable">
+                <thead>
+                    <tr>
+                        <th class="col-qty">Cant.</th>
+                        <th class="col-desc">Descripción del Producto</th>
+                        <th class="col-price">Precio Unit.</th>
+                        <th class="col-total">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="itemsBody">
+                    <tr>
+                        <td><input type="number" class="item-qty" value="1" min="1" onchange="calculateTotals()"></td>
+                        <td><input type="text" class="item-desc" placeholder="Nombre del artículo"></td>
+                        <td>
+                            <div style="display:flex; align-items:center;">
+                                <span>$</span><input type="number" class="item-price" value="0.00" step="0.01"
+                                    onchange="calculateTotals()">
+                            </div>
+                        </td>
+                        <td class="col-total"><span class="item-total">$0.00</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button class="btn-add-row" id="btnAddRow" onclick="addRow()">+ Añadir artículo</button>
+
+            <div class="totals-section">
+                <div class="totals-box">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span class="total-value" id="lblSubtotal">$0.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Descuento / Otros:</span>
+                        <div style="display:flex; align-items:center;">
+                            <span>-$</span><input type="number" id="inputDiscount" value="0.00" step="0.01"
+                                onchange="calculateTotals()">
+                        </div>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total:</span>
+                        <span class="total-value" id="lblTotal">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="doc-footer">
+                <input type="text" value="¡Gracias por tu compra!"
+                    style="text-align: center; width: 100%; font-weight: 600; font-size: 16px;">
+                <input type="text" value="Si tienes alguna duda, contáctanos."
+                    style="text-align: center; width: 100%; margin-top: 5px; font-size: 14px; color: #666;">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const DB_KEY = 'dunny_notes_db';
+
+        // Set current date
+        document.getElementById('doc-date').valueAsDate = new Date();
+
+        // Base de Datos interna (localStorage)
+        function getNotesDB() {
+            try {
+                const data = localStorage.getItem(DB_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch (e) {
+                console.error('Error leyendo base de datos:', e);
+                return [];
+            }
+        }
+
+        // Guardar archivo en el servidor local (Carpeta Notas/)
+        async function saveFileToServer(filename, dataUrl) {
+            try {
+                await fetch('/api/save-file', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ filename, data: dataUrl })
+                });
+            } catch (err) {
+                console.log('Servidor local no detectado para guardado directo en carpeta:', err);
+            }
+        }
+
+        // Base de Datos interna (localStorage + Servidor local)
+        function getNotesDB() {
+            try {
+                const data = localStorage.getItem(DB_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch (e) {
+                console.error('Error leyendo base de datos:', e);
+                return [];
+            }
+        }
+
+        function saveNotesDB(db) {
+            try {
+                localStorage.setItem(DB_KEY, JSON.stringify(db, null, 2));
+            } catch (e) {
+                console.error('Error guardando en base de datos:', e);
+            }
+        }
+
+        // Obtener el siguiente número de nota consecutivo (iniciando desde 123)
+        function getNextNoteNumber() {
+            const db = getNotesDB();
+            let maxNum = 122; // Inicia en 122 para que la primera nota sea REM-123
+            db.forEach(item => {
+                if (item.noteNumber) {
+                    const match = item.noteNumber.match(/\d+/);
+                    if (match) {
+                        const num = parseInt(match[0], 10);
+                        if (num > maxNum) maxNum = num;
+                    }
+                }
+            });
+            const nextNum = maxNum + 1;
+            return `REM-${String(nextNum).padStart(3, '0')}`;
+        }
+
+        // Carga inicial del número de nota
+        async function initNoteNumber() {
+            const inputNote = document.getElementById('note-number');
+            if (!inputNote) return;
+
+            try {
+                // Intentar cargar desde el servidor local / API
+                const res = await fetch('/api/notes');
+                if (res.ok) {
+                    const diskData = await res.json();
+                    if (Array.isArray(diskData)) {
+                        saveNotesDB(diskData);
+                    }
+                }
+            } catch (e) {
+                // Si falla el servidor, intentar cargar notas_bd.json estático
+                try {
+                    const resJson = await fetch('notas_bd.json');
+                    if (resJson.ok) {
+                        const initialData = await resJson.json();
+                        if (Array.isArray(initialData)) {
+                            saveNotesDB(initialData);
+                        }
+                    }
+                } catch (e2) {}
+            }
+
+            inputNote.value = getNextNoteNumber();
+        }
+
+        // Extraer datos del formulario actual
+        function getCurrentNoteData() {
+            const noteNumber = document.getElementById('note-number').value.trim() || getNextNoteNumber();
+            const date = document.getElementById('doc-date').value;
+            const clientInputs = document.querySelectorAll('.client-section input');
+            const client = clientInputs[0] ? clientInputs[0].value.trim() : '';
+            const phone = clientInputs[1] ? clientInputs[1].value.trim() : '';
+            const address = clientInputs[2] ? clientInputs[2].value.trim() : '';
+            const email = clientInputs[3] ? clientInputs[3].value.trim() : '';
+
+            const items = [];
+            document.querySelectorAll('#itemsBody tr').forEach(row => {
+                const qty = parseFloat(row.querySelector('.item-qty')?.value) || 0;
+                const desc = row.querySelector('.item-desc')?.value.trim() || '';
+                const price = parseFloat(row.querySelector('.item-price')?.value) || 0;
+                const total = qty * price;
+                if (desc || qty > 0 || price > 0) {
+                    items.push({ qty, description: desc, price, total });
+                }
+            });
+
+            const subtotalText = document.getElementById('lblSubtotal').textContent.replace('$', '');
+            const discount = parseFloat(document.getElementById('inputDiscount').value) || 0;
+            const totalText = document.getElementById('lblTotal').textContent.replace('$', '');
+
+            return {
+                noteNumber,
+                date,
+                client,
+                phone,
+                address,
+                email,
+                items,
+                subtotal: parseFloat(subtotalText) || 0,
+                discount,
+                total: parseFloat(totalText) || 0,
+                createdAt: new Date().toISOString()
+            };
+        }
+
+        // Guardar nota actual en la base de datos interna y en el archivo de disco notas_bd.json
+        async function saveCurrentNoteToDB() {
+            const noteData = getCurrentNoteData();
+            // Solo guardar si hay algún cliente o producto o total > 0
+            if (!noteData.client && noteData.items.length === 0 && noteData.total === 0) {
+                return;
+            }
+
+            const db = getNotesDB();
+            const index = db.findIndex(item => item.noteNumber === noteData.noteNumber);
+            if (index >= 0) {
+                db[index] = { ...db[index], ...noteData };
+            } else {
+                db.push(noteData);
+            }
+            saveNotesDB(db);
+
+            // Enviar al servidor local para escribir directamente en notas_bd.json
+            try {
+                await fetch('/api/notes', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(noteData)
+                });
+            } catch (err) {
+                console.log('Guardado en servidor local omitido (modo estático)');
+            }
+        }
+
+        // Crear una nueva nota limpiando campos e incrementando folio
+        async function startNewNote() {
+            await saveCurrentNoteToDB();
+
+            const clientInputs = document.querySelectorAll('.client-section input');
+            clientInputs.forEach(input => input.value = '');
+
+            const tbody = document.getElementById('itemsBody');
+            tbody.innerHTML = `
+                <tr>
+                    <td><input type="number" class="item-qty" value="1" min="1" onchange="calculateTotals()"></td>
+                    <td><input type="text" class="item-desc" placeholder="Nombre del artículo"></td>
+                    <td>
+                        <div style="display:flex; align-items:center;">
+                            <span>$</span><input type="number" class="item-price" value="0.00" step="0.01" onchange="calculateTotals()">
+                        </div>
+                    </td>
+                    <td class="col-total"><span class="item-total">$0.00</span></td>
+                </tr>
+            `;
+
+            document.getElementById('inputDiscount').value = '0.00';
+            document.getElementById('doc-date').valueAsDate = new Date();
+            document.getElementById('note-number').value = getNextNoteNumber();
+            calculateTotals();
+        }
+
+        // Exportar la base de datos a un archivo JSON
+        async function exportDatabaseJSON() {
+            await saveCurrentNoteToDB();
+            const db = getNotesDB();
+            const jsonStr = JSON.stringify(db, null, 2);
+            const blob = new Blob([jsonStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'notas_bd.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Importar base de datos desde un archivo JSON local
+        function importDatabaseJSON(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = async function (e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    if (Array.isArray(importedData)) {
+                        saveNotesDB(importedData);
+                        // Enviar notas importadas al servidor si está activo
+                        for (const note of importedData) {
+                            try {
+                                await fetch('/api/notes', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify(note)
+                                });
+                            } catch (err) {}
+                        }
+                        document.getElementById('note-number').value = getNextNoteNumber();
+                        alert(`¡Base de datos importada con éxito! Total de notas en registro: ${importedData.length}`);
+                    } else {
+                        alert('El archivo cargado no contiene un formato de lista válido.');
+                    }
+                } catch (err) {
+                    alert('Error al leer el archivo JSON: ' + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function addRow() {
+            const tbody = document.getElementById('itemsBody');
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td><input type="number" class="item-qty" value="1" min="1" onchange="calculateTotals()"></td>
+                <td><input type="text" class="item-desc" placeholder="Nombre del artículo"></td>
+                <td>
+                    <div style="display:flex; align-items:center;">
+                        <span>$</span><input type="number" class="item-price" value="0.00" step="0.01" onchange="calculateTotals()">
+                    </div>
+                </td>
+                <td class="col-total"><span class="item-total">$0.00</span></td>
+            `;
+            tbody.appendChild(tr);
+            calculateTotals();
+        }
+
+        function calculateTotals() {
+            let subtotal = 0;
+            const rows = document.querySelectorAll('#itemsBody tr');
+
+            rows.forEach(row => {
+                const qty = parseFloat(row.querySelector('.item-qty').value) || 0;
+                const price = parseFloat(row.querySelector('.item-price').value) || 0;
+                const total = qty * price;
+                row.querySelector('.item-total').textContent = '$' + total.toFixed(2);
+                subtotal += total;
+            });
+
+            const discount = parseFloat(document.getElementById('inputDiscount').value) || 0;
+            const finalTotal = subtotal - discount;
+
+            document.getElementById('lblSubtotal').textContent = '$' + subtotal.toFixed(2);
+            document.getElementById('lblTotal').textContent = '$' + Math.max(0, finalTotal).toFixed(2);
+        }
+
+        function prepareForExport(skipSave = false) {
+            if (!skipSave) {
+                saveCurrentNoteToDB();
+            }
+
+            const doc = document.getElementById('note-document');
+            doc.style.boxShadow = 'none';
+            doc.style.borderRadius = '0';
+
+            const inputs = document.querySelectorAll('#note-document input');
+            inputs.forEach(input => {
+                input.classList.add('no-border');
+                input.setAttribute('value', input.value);
+            });
+            document.getElementById('btnAddRow').style.display = 'none';
+        }
+
+        function restoreAfterExport() {
+            const doc = document.getElementById('note-document');
+            doc.style.boxShadow = '';
+            doc.style.borderRadius = '';
+
+            const inputs = document.querySelectorAll('#note-document input');
+            inputs.forEach(input => {
+                input.classList.remove('no-border');
+            });
+            document.getElementById('btnAddRow').style.display = 'block';
+        }
+
+        function getFilename() {
+            const clientName = document.querySelectorAll('.client-section input')[0]?.value.trim() || 'Cliente';
+            const noteNumber = document.getElementById('note-number').value.trim() || 'SN';
+            return `Remision_${noteNumber}_Dunny_${clientName.replace(/\s+/g, '_')}`;
+        }
+
+        // Download as PDF
+        async function downloadPDF() {
+            const btnPdf = document.querySelectorAll('.btn')[2];
+            const originalText = btnPdf.innerHTML;
+            btnPdf.innerHTML = 'Generando...';
+            btnPdf.disabled = true;
+
+            prepareForExport();
+            const filename = getFilename() + '.pdf';
+
+            const opt = {
+                margin: 0,
+                filename: 'Notas/' + filename,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, logging: false },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            try {
+                const worker = html2pdf().set(opt).from(document.getElementById('note-document'));
+                const pdfBlob = await worker.output('blob');
+
+                // Convertir Blob a DataURL para enviar al servidor local (Guardado directo en carpeta Notas/)
+                const reader = new FileReader();
+                reader.readAsDataURL(pdfBlob);
+                reader.onloadend = function () {
+                    saveFileToServer(filename, reader.result);
+                };
+
+                if ('showSaveFilePicker' in window) {
+                    try {
+                        const handle = await window.showSaveFilePicker({
+                            suggestedName: filename,
+                            types: [{
+                                description: 'Documento PDF',
+                                accept: { 'application/pdf': ['.pdf'] },
+                            }],
+                        });
+                        const writable = await handle.createWritable();
+                        await writable.write(pdfBlob);
+                        await writable.close();
+                        return;
+                    } catch (pickerErr) {
+                        if (pickerErr.name === 'AbortError') return;
+                    }
+                }
+                await html2pdf().set(opt).from(document.getElementById('note-document')).save();
+            } catch (err) {
+                console.error('Error al generar PDF:', err);
+            } finally {
+                restoreAfterExport();
+                btnPdf.innerHTML = originalText;
+                btnPdf.disabled = false;
+            }
+        }
+
+        // Download as Image
+        async function downloadImage() {
+            const btnImg = document.querySelectorAll('.btn')[1];
+            const originalText = btnImg.innerHTML;
+            btnImg.innerHTML = 'Generando...';
+            btnImg.disabled = true;
+
+            prepareForExport();
+            const filename = getFilename() + '.png';
+
+            try {
+                const canvas = await html2canvas(document.getElementById('note-document'), { scale: 2, useCORS: true, logging: false });
+                const dataUrl = canvas.toDataURL('image/png');
+
+                // Guardar directamente en la carpeta Notas/ a través del servidor local
+                saveFileToServer(filename, dataUrl);
+
+                if ('showSaveFilePicker' in window) {
+                    try {
+                        const handle = await window.showSaveFilePicker({
+                            suggestedName: filename,
+                            types: [{
+                                description: 'Imagen PNG',
+                                accept: { 'image/png': ['.png'] },
+                            }],
+                        });
+                        const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+                        const writable = await handle.createWritable();
+                        await writable.write(blob);
+                        await writable.close();
+                        return;
+                    } catch (pickerErr) {
+                        if (pickerErr.name === 'AbortError') return;
+                    }
+                }
+
+                const link = document.createElement('a');
+                link.download = 'Notas/' + filename;
+                link.href = dataUrl;
+                link.click();
+            } catch (err) {
+                console.error('Error al generar imagen:', err);
+            } finally {
+                restoreAfterExport();
+                btnImg.innerHTML = originalText;
+                btnImg.disabled = false;
+            }
+        }
+
+        // Cargar datos de una nota específica en el DOM
+        function loadNoteIntoDOM(note) {
+            document.getElementById('note-number').value = note.noteNumber || '';
+            if (note.date) document.getElementById('doc-date').value = note.date;
+
+            const clientInputs = document.querySelectorAll('.client-section input');
+            if (clientInputs[0]) clientInputs[0].value = note.client || '';
+            if (clientInputs[1]) clientInputs[1].value = note.phone || '';
+            if (clientInputs[2]) clientInputs[2].value = note.address || '';
+            if (clientInputs[3]) clientInputs[3].value = note.email || '';
+
+            const tbody = document.getElementById('itemsBody');
+            tbody.innerHTML = '';
+
+            const items = note.items || [];
+            if (items.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td><input type="number" class="item-qty" value="1" min="1" onchange="calculateTotals()"></td>
+                        <td><input type="text" class="item-desc" placeholder="Nombre del artículo"></td>
+                        <td>
+                            <div style="display:flex; align-items:center;">
+                                <span>$</span><input type="number" class="item-price" value="0.00" step="0.01" onchange="calculateTotals()">
+                            </div>
+                        </td>
+                        <td class="col-total"><span class="item-total">$0.00</span></td>
+                    </tr>
+                `;
+            } else {
+                items.forEach(item => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td><input type="number" class="item-qty" value="${item.qty}" min="1" onchange="calculateTotals()"></td>
+                        <td><input type="text" class="item-desc" value="${item.description}"></td>
+                        <td>
+                            <div style="display:flex; align-items:center;">
+                                <span>$</span><input type="number" class="item-price" value="${item.price}" step="0.01" onchange="calculateTotals()">
+                            </div>
+                        </td>
+                        <td class="col-total"><span class="item-total">$${(item.total || 0).toFixed(2)}</span></td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+
+            document.getElementById('inputDiscount').value = (note.discount || 0).toFixed(2);
+            calculateTotals();
+        }
+
+        // Generar todas las imágenes PNG de las notas en la base de datos de manera masiva
+        async function generateAllImagesBatch() {
+            let db = [];
+            try {
+                const res = await fetch('/api/notes');
+                if (res.ok) db = await res.json();
+            } catch (e) {}
+            if (!Array.isArray(db) || db.length === 0) {
+                db = getNotesDB();
+            }
+
+            if (db.length === 0) {
+                alert('No hay notas registradas en la base de datos.');
+                return;
+            }
+
+            const btn = document.querySelectorAll('.btn')[3];
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Generando lote...';
+            btn.disabled = true;
+
+            try {
+                for (let i = 0; i < db.length; i++) {
+                    const note = db[i];
+                    loadNoteIntoDOM(note);
+
+                    prepareForExport(true); // Omitir autosave a BD durante renderizado de imágenes
+                    const filename = getFilename() + '.png';
+
+                    try {
+                        const canvas = await html2canvas(document.getElementById('note-document'), { scale: 2, useCORS: true, logging: false });
+                        const dataUrl = canvas.toDataURL('image/png');
+                        await saveFileToServer(filename, dataUrl);
+                    } catch (e) {
+                        console.error('Error generando imagen para ' + note.noteNumber, e);
+                    } finally {
+                        restoreAfterExport();
+                    }
+                }
+                alert(`¡Éxito! Se generaron y guardaron las imágenes de las ${db.length} notas en la carpeta Notas/.`);
+            } catch (err) {
+                console.error('Error en lote de imágenes:', err);
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                initNoteNumber();
+            }
+        }
+
+        // Inicialización
+        calculateTotals();
+        initNoteNumber();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1250 @@
+[
+  {
+    "noteNumber": "REM-123",
+    "date": "2026-07-01",
+    "client": "Fernando Castillo",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-07-01T15:22:00.000Z"
+  },
+  {
+    "noteNumber": "REM-124",
+    "date": "2026-07-02",
+    "client": "Andrea Paredes",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-07-02T14:26:00.000Z"
+  },
+  {
+    "noteNumber": "REM-125",
+    "date": "2026-07-03",
+    "client": "Sofía Delgado",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 6,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 180.0
+      }
+    ],
+    "subtotal": 180.0,
+    "discount": 0.0,
+    "total": 180.0,
+    "createdAt": "2026-07-03T13:20:00.000Z"
+  },
+  {
+    "noteNumber": "REM-126",
+    "date": "2026-07-04",
+    "client": "Ricardo Navarro",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 5,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 150.0
+      }
+    ],
+    "subtotal": 150.0,
+    "discount": 0.0,
+    "total": 150.0,
+    "createdAt": "2026-07-04T16:47:00.000Z"
+  },
+  {
+    "noteNumber": "REM-127",
+    "date": "2026-07-06",
+    "client": "Claudia Gutiérrez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-07-06T14:44:00.000Z"
+  },
+  {
+    "noteNumber": "REM-128",
+    "date": "2026-07-07",
+    "client": "Esteban Aguilar",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-07-07T16:17:00.000Z"
+  },
+  {
+    "noteNumber": "REM-129",
+    "date": "2026-07-08",
+    "client": "Recicladora del Bajío",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 36,
+        "description": "Playera impreso recicladora",
+        "price": 150.0,
+        "total": 5400.0
+      }
+    ],
+    "subtotal": 5400.0,
+    "discount": 0.0,
+    "total": 5400.0,
+    "createdAt": "2026-07-08T10:30:00.000Z"
+  },
+  {
+    "noteNumber": "REM-130",
+    "date": "2026-07-09",
+    "client": "María Elena Ríos",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 5,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 150.0
+      }
+    ],
+    "subtotal": 150.0,
+    "discount": 0.0,
+    "total": 150.0,
+    "createdAt": "2026-07-09T13:28:00.000Z"
+  },
+  {
+    "noteNumber": "REM-131",
+    "date": "2026-07-10",
+    "client": "Verónica Reyes",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-07-10T14:53:00.000Z"
+  },
+  {
+    "noteNumber": "REM-132",
+    "date": "2026-07-11",
+    "client": "Claudia Gutiérrez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 5,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 150.0
+      }
+    ],
+    "subtotal": 150.0,
+    "discount": 0.0,
+    "total": 150.0,
+    "createdAt": "2026-07-11T15:12:00.000Z"
+  },
+  {
+    "noteNumber": "REM-133",
+    "date": "2026-07-13",
+    "client": "Patricia Morales",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 90.0
+      }
+    ],
+    "subtotal": 90.0,
+    "discount": 0.0,
+    "total": 90.0,
+    "createdAt": "2026-07-13T12:19:00.000Z"
+  },
+  {
+    "noteNumber": "REM-134",
+    "date": "2026-07-14",
+    "client": "Patricia Morales",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 90.0
+      }
+    ],
+    "subtotal": 90.0,
+    "discount": 0.0,
+    "total": 90.0,
+    "createdAt": "2026-07-14T14:28:00.000Z"
+  },
+  {
+    "noteNumber": "REM-135",
+    "date": "2026-07-15",
+    "client": "Familia Morales - Bautizo",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 40,
+        "description": "Llavero para bautizo",
+        "price": 20.0,
+        "total": 800.0
+      }
+    ],
+    "subtotal": 800.0,
+    "discount": 0.0,
+    "total": 800.0,
+    "createdAt": "2026-07-15T12:00:00.000Z"
+  },
+  {
+    "noteNumber": "REM-136",
+    "date": "2026-07-16",
+    "client": "Isabel Flores",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-07-16T11:55:00.000Z"
+  },
+  {
+    "noteNumber": "REM-137",
+    "date": "2026-07-17",
+    "client": "Carmen Ruiz",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 6,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 180.0
+      }
+    ],
+    "subtotal": 180.0,
+    "discount": 0.0,
+    "total": 180.0,
+    "createdAt": "2026-07-17T12:43:00.000Z"
+  },
+  {
+    "noteNumber": "REM-138",
+    "date": "2026-07-18",
+    "client": "Oscar Salazar",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 90.0
+      }
+    ],
+    "subtotal": 90.0,
+    "discount": 0.0,
+    "total": 90.0,
+    "createdAt": "2026-07-18T15:11:00.000Z"
+  },
+  {
+    "noteNumber": "REM-139",
+    "date": "2026-07-20",
+    "client": "Luz María Domínguez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Recorte de vinil para globo (Graduación)",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-07-20T12:54:00.000Z"
+  },
+  {
+    "noteNumber": "REM-140",
+    "date": "2026-07-22",
+    "client": "Patricia Morales",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 5,
+        "description": "Taza mágica personalizada",
+        "price": 100.0,
+        "total": 500.0
+      }
+    ],
+    "subtotal": 500.0,
+    "discount": 0.0,
+    "total": 500.0,
+    "createdAt": "2026-07-22T14:15:00.000Z"
+  },
+  {
+    "noteNumber": "REM-141",
+    "date": "2026-08-01",
+    "client": "María Elena Ríos",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 4,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 120.0
+      },
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      },
+      {
+        "qty": 3,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 150.0
+      }
+    ],
+    "subtotal": 330.0,
+    "discount": 0.0,
+    "total": 330.0,
+    "createdAt": "2026-08-01T11:52:00.000Z"
+  },
+  {
+    "noteNumber": "REM-142",
+    "date": "2026-08-01",
+    "client": "Gabriel Silva",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 4,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 120.0
+      },
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 180.0,
+    "discount": 0.0,
+    "total": 180.0,
+    "createdAt": "2026-08-01T16:21:00.000Z"
+  },
+  {
+    "noteNumber": "REM-143",
+    "date": "2026-08-03",
+    "client": "Daniela Jiménez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 4,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 120.0
+      },
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      }
+    ],
+    "subtotal": 150.0,
+    "discount": 0.0,
+    "total": 150.0,
+    "createdAt": "2026-08-03T16:33:00.000Z"
+  },
+  {
+    "noteNumber": "REM-144",
+    "date": "2026-08-04",
+    "client": "Pastelería Dulce Amor",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 100,
+        "description": "Tarjeta para pastelero personalizada",
+        "price": 2.0,
+        "total": 200.0
+      }
+    ],
+    "subtotal": 200.0,
+    "discount": 0.0,
+    "total": 200.0,
+    "createdAt": "2026-08-04T09:45:00.000Z"
+  },
+  {
+    "noteNumber": "REM-145",
+    "date": "2026-08-05",
+    "client": "Andrea Paredes",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 90.0
+      },
+      {
+        "qty": 2,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 100.0
+      }
+    ],
+    "subtotal": 190.0,
+    "discount": 0.0,
+    "total": 190.0,
+    "createdAt": "2026-08-05T13:20:00.000Z"
+  },
+  {
+    "noteNumber": "REM-146",
+    "date": "2026-08-05",
+    "client": "Adrián Herrera",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 90.0
+      }
+    ],
+    "subtotal": 90.0,
+    "discount": 0.0,
+    "total": 90.0,
+    "createdAt": "2026-08-05T14:32:00.000Z"
+  },
+  {
+    "noteNumber": "REM-147",
+    "date": "2026-08-06",
+    "client": "María Elena Ríos",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      },
+      {
+        "qty": 2,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 100.0
+      }
+    ],
+    "subtotal": 160.0,
+    "discount": 0.0,
+    "total": 160.0,
+    "createdAt": "2026-08-06T12:26:00.000Z"
+  },
+  {
+    "noteNumber": "REM-148",
+    "date": "2026-08-06",
+    "client": "Carmen Ruiz",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 90.0
+      }
+    ],
+    "subtotal": 90.0,
+    "discount": 0.0,
+    "total": 90.0,
+    "createdAt": "2026-08-06T15:53:00.000Z"
+  },
+  {
+    "noteNumber": "REM-149",
+    "date": "2026-08-07",
+    "client": "Laura Martínez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 60.0
+      },
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      },
+      {
+        "qty": 3,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 150.0
+      }
+    ],
+    "subtotal": 240.0,
+    "discount": 0.0,
+    "total": 240.0,
+    "createdAt": "2026-08-07T11:26:00.000Z"
+  },
+  {
+    "noteNumber": "REM-150",
+    "date": "2026-08-07",
+    "client": "Andrea Paredes",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-08-07T14:12:00.000Z"
+  },
+  {
+    "noteNumber": "REM-151",
+    "date": "2026-08-08",
+    "client": "María Elena Ríos",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 90.0
+      },
+      {
+        "qty": 3,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 150.0
+      }
+    ],
+    "subtotal": 240.0,
+    "discount": 0.0,
+    "total": 240.0,
+    "createdAt": "2026-08-08T12:51:00.000Z"
+  },
+  {
+    "noteNumber": "REM-152",
+    "date": "2026-08-10",
+    "client": "Hugo Medina",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 60.0
+      },
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      },
+      {
+        "qty": 2,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 100.0
+      }
+    ],
+    "subtotal": 190.0,
+    "discount": 0.0,
+    "total": 190.0,
+    "createdAt": "2026-08-10T15:42:00.000Z"
+  },
+  {
+    "noteNumber": "REM-153",
+    "date": "2026-08-11",
+    "client": "Oscar Salazar",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 4,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 120.0
+      },
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      },
+      {
+        "qty": 3,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 150.0
+      }
+    ],
+    "subtotal": 330.0,
+    "discount": 0.0,
+    "total": 330.0,
+    "createdAt": "2026-08-11T14:35:00.000Z"
+  },
+  {
+    "noteNumber": "REM-154",
+    "date": "2026-08-12",
+    "client": "Andrea Paredes",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      }
+    ],
+    "subtotal": 30.0,
+    "discount": 0.0,
+    "total": 30.0,
+    "createdAt": "2026-08-12T16:11:00.000Z"
+  },
+  {
+    "noteNumber": "REM-155",
+    "date": "2026-08-12",
+    "client": "Miguel Ángel Castro",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 90.0
+      },
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      }
+    ],
+    "subtotal": 120.0,
+    "discount": 0.0,
+    "total": 120.0,
+    "createdAt": "2026-08-12T18:41:00.000Z"
+  },
+  {
+    "noteNumber": "REM-156",
+    "date": "2026-08-13",
+    "client": "Verónica Reyes",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 60.0
+      },
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      },
+      {
+        "qty": 2,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 100.0
+      }
+    ],
+    "subtotal": 190.0,
+    "discount": 0.0,
+    "total": 190.0,
+    "createdAt": "2026-08-13T14:51:00.000Z"
+  },
+  {
+    "noteNumber": "REM-157",
+    "date": "2026-08-13",
+    "client": "Héctor Molina",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      }
+    ],
+    "subtotal": 30.0,
+    "discount": 0.0,
+    "total": 30.0,
+    "createdAt": "2026-08-13T18:50:00.000Z"
+  },
+  {
+    "noteNumber": "REM-158",
+    "date": "2026-08-14",
+    "client": "Carlos Mendoza",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 90.0
+      },
+      {
+        "qty": 2,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 100.0
+      }
+    ],
+    "subtotal": 190.0,
+    "discount": 0.0,
+    "total": 190.0,
+    "createdAt": "2026-08-14T14:24:00.000Z"
+  },
+  {
+    "noteNumber": "REM-159",
+    "date": "2026-08-15",
+    "client": "Verónica Reyes",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 4,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 120.0
+      },
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      },
+      {
+        "qty": 3,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 150.0
+      }
+    ],
+    "subtotal": 330.0,
+    "discount": 0.0,
+    "total": 330.0,
+    "createdAt": "2026-08-15T10:19:00.000Z"
+  },
+  {
+    "noteNumber": "REM-160",
+    "date": "2026-08-15",
+    "client": "Ricardo Navarro",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-08-15T11:58:00.000Z"
+  },
+  {
+    "noteNumber": "REM-161",
+    "date": "2026-08-17",
+    "client": "Esteban Aguilar",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-08-17T10:36:00.000Z"
+  },
+  {
+    "noteNumber": "REM-162",
+    "date": "2026-08-18",
+    "client": "Ana Sofía Torres",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-08-18T11:21:00.000Z"
+  },
+  {
+    "noteNumber": "REM-163",
+    "date": "2026-08-18",
+    "client": "Claudia Gutiérrez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 90.0
+      },
+      {
+        "qty": 1,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 50.0
+      }
+    ],
+    "subtotal": 140.0,
+    "discount": 0.0,
+    "total": 140.0,
+    "createdAt": "2026-08-18T18:21:00.000Z"
+  },
+  {
+    "noteNumber": "REM-164",
+    "date": "2026-08-19",
+    "client": "Fernando Castillo",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      }
+    ],
+    "subtotal": 30.0,
+    "discount": 0.0,
+    "total": 30.0,
+    "createdAt": "2026-08-19T15:23:00.000Z"
+  },
+  {
+    "noteNumber": "REM-165",
+    "date": "2026-08-19",
+    "client": "Claudia Gutiérrez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 60.0
+      },
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 120.0,
+    "discount": 0.0,
+    "total": 120.0,
+    "createdAt": "2026-08-19T18:33:00.000Z"
+  },
+  {
+    "noteNumber": "REM-166",
+    "date": "2026-08-20",
+    "client": "Luz María Domínguez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 5,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 150.0
+      },
+      {
+        "qty": 1,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 50.0
+      }
+    ],
+    "subtotal": 200.0,
+    "discount": 0.0,
+    "total": 200.0,
+    "createdAt": "2026-08-20T16:14:00.000Z"
+  },
+  {
+    "noteNumber": "REM-167",
+    "date": "2026-08-21",
+    "client": "Esteban Aguilar",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      }
+    ],
+    "subtotal": 30.0,
+    "discount": 0.0,
+    "total": 30.0,
+    "createdAt": "2026-08-21T17:42:00.000Z"
+  },
+  {
+    "noteNumber": "REM-168",
+    "date": "2026-08-21",
+    "client": "Luz María Domínguez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 90.0
+      },
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 150.0,
+    "discount": 0.0,
+    "total": 150.0,
+    "createdAt": "2026-08-21T18:56:00.000Z"
+  },
+  {
+    "noteNumber": "REM-169",
+    "date": "2026-08-22",
+    "client": "Luz María Domínguez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 5,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 150.0
+      },
+      {
+        "qty": 2,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 100.0
+      }
+    ],
+    "subtotal": 250.0,
+    "discount": 0.0,
+    "total": 250.0,
+    "createdAt": "2026-08-22T14:18:00.000Z"
+  },
+  {
+    "noteNumber": "REM-170",
+    "date": "2026-08-24",
+    "client": "Hugo Medina",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 5,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 150.0
+      },
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      }
+    ],
+    "subtotal": 180.0,
+    "discount": 0.0,
+    "total": 180.0,
+    "createdAt": "2026-08-24T12:54:00.000Z"
+  },
+  {
+    "noteNumber": "REM-171",
+    "date": "2026-08-25",
+    "client": "Héctor Molina",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 1,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 30.0
+      }
+    ],
+    "subtotal": 30.0,
+    "discount": 0.0,
+    "total": 30.0,
+    "createdAt": "2026-08-25T11:41:00.000Z"
+  },
+  {
+    "noteNumber": "REM-172",
+    "date": "2026-08-26",
+    "client": "Roberto Gómez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 60.0
+      },
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      },
+      {
+        "qty": 1,
+        "description": "Portada para libreta con acabado holográfico",
+        "price": 50.0,
+        "total": 50.0
+      }
+    ],
+    "subtotal": 170.0,
+    "discount": 0.0,
+    "total": 170.0,
+    "createdAt": "2026-08-26T14:39:00.000Z"
+  },
+  {
+    "noteNumber": "REM-173",
+    "date": "2026-08-27",
+    "client": "Carmen Ruiz",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 5,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 150.0
+      }
+    ],
+    "subtotal": 150.0,
+    "discount": 0.0,
+    "total": 150.0,
+    "createdAt": "2026-08-27T15:11:00.000Z"
+  },
+  {
+    "noteNumber": "REM-174",
+    "date": "2026-08-28",
+    "client": "Lucía Fernández",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 4,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 120.0
+      },
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para lápices",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 180.0,
+    "discount": 0.0,
+    "total": 180.0,
+    "createdAt": "2026-08-28T11:49:00.000Z"
+  },
+  {
+    "noteNumber": "REM-175",
+    "date": "2026-08-29",
+    "client": "Roberto Gómez",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 2,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 60.0
+      }
+    ],
+    "subtotal": 60.0,
+    "discount": 0.0,
+    "total": 60.0,
+    "createdAt": "2026-08-29T15:19:00.000Z"
+  },
+  {
+    "noteNumber": "REM-176",
+    "date": "2026-08-31",
+    "client": "Carmen Ruiz",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "items": [
+      {
+        "qty": 3,
+        "description": "Planilla de etiquetas para libretas",
+        "price": 30.0,
+        "total": 90.0
+      }
+    ],
+    "subtotal": 90.0,
+    "discount": 0.0,
+    "total": 90.0,
+    "createdAt": "2026-08-31T13:23:00.000Z"
+  }
+]
